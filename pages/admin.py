@@ -4,7 +4,7 @@ from django.utils.html import format_html
 # Register your models here.
 
 class TeamAdmin(admin.ModelAdmin):
-    def thumbnail(self, object):
+    def thumbnail(self, object):   # created the pic in data table
         return format_html('<img src="{}" width="40" style="border-radius: 50px;" />'.format(object.photo.url))  # add photo in models and some code of html
 
     thumbnail.short_description = 'photo'
