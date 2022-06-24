@@ -2,7 +2,10 @@ from django.db import models
 from datetime import datetime
 from ckeditor.fields import RichTextField
 from multiselectfield import MultiSelectField
-# Create your models here.
+from django.db.models import Model
+
+
+# Create your models Cars.
 class Car(models.Model):
 
 
@@ -67,4 +70,4 @@ class Car(models.Model):
 
 
     def __str__(self):
-        return sefl.car_title
+        return self.car_title
