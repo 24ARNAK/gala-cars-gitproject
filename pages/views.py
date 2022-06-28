@@ -3,7 +3,9 @@ from .models import Team
 from cars.models import Car
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required
+#from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+
 
 
 # Create your views here.
@@ -48,18 +50,18 @@ def contact(request):
         phone = request.POST['phone']
         message = request.POST['message']
 
-        email_subject = 'You have a new message from Carzone website regarding ' + subject
+        email_subject = 'You have a new message from GalaCar website regarding ' + subject
         message_body = 'Name: ' + name + '. Email: ' + email + '. Phone: ' + phone + '. Message: ' + message
 
-        admin_info = User.objects.get(is_superuser=True)
-        admin_email = admin_info.email
-        send_mail(
-                email_subject,
-                message_body,
-                'rathan.kumar049@gmail.com',
-                [admin_email],
-                fail_silently=False,
-            )
+        #admin_info = User.objects.get(is_superuser=True)
+        #admin_email = admin_info.email
+        #send_mail(
+        #        email_subject,
+        #        message_body,
+        #        'galaCar.24.43@gmail.com',
+        #        [admin_email],
+        #        fail_silently=False,
+        #    )
         messages.success(request, 'Thank you for contacting us. We will get back to you shortly')
         return redirect('contact')
 
