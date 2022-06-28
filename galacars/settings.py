@@ -164,11 +164,13 @@ SITE_ID = 1
 
 
 # Email sending
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'haytam.dr.md@gmail.com'
-EMAIL_HOST_PASSWORD = '21.father.3'
+EMAIL_HOST_USER = 'galaCar.24.43@gmail.com'
+EMAIL_HOST_PASSWORD = 'azerty1234//'
 EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = fail_silently
 
 
 # Whitenoise settings
