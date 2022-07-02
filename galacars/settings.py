@@ -97,7 +97,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'galacar_db',
         'USER': 'postgres',
-        'PASSWORD': '21father3',
+        'PASSWORD': '******',
         'HOST': 'localhost',
         'PORT': '5432'
     }
